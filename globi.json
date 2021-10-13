@@ -14,7 +14,7 @@
     "headerRowCount" : 1,
     "interactionTypeName": "hostOf",
     "interactionTypeId": "http://purl.obolibrary.org/obo/RO_0002453",
-    "null" : [ "" ],
+    "null" : [ "", "NA" ],
     "tableSchema" : {
       "columns" : [ {
         "name" : "sourceTaxonName",
