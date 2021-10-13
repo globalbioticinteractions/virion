@@ -1,0 +1,167 @@
+{
+  "@context" : [ "http://www.w3.org/ns/csvw", {
+    "@language" : "en"
+  } ],
+  "rdfs:comment" : [ "inspired by https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/" ],
+  "tables" : [ {
+    "@context" : [ "http://www.w3.org/ns/csvw", {
+      "@language" : "en"
+    } ],
+    "rdfs:comment" : [ "inspired by https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/" ],
+    "url" : "file:///home/jorrit/proj/globi/data/virion/virion.csv.gz",
+    "dcterms:bibliographicCitation" : "Carlson, C.J. et al., 2021. The Global Virome in One Network (VIRION): an atlas of vertebrate-virus associations. Available at: http://dx.doi.org/10.1101/2021.08.06.455442",
+    "delimiter" : "\t",
+    "headerRowCount" : 1,
+    "interactionTypeName": "hostOf",
+    "interactionTypeId": "http://purl.obolibrary.org/obo/RO_0002453",
+    "null" : [ "" ],
+    "tableSchema" : {
+      "columns" : [ {
+        "name" : "sourceTaxonName",
+        "titles" : "Host",
+        "datatype" : "string"
+      }, {
+        "name" : "targetTaxonName",
+        "titles" : "Virus",
+        "datatype" : "string"
+      }, {
+        "name" : "sourceTaxonId",
+        "titles" : "HostTaxID",
+        "datatype" : {
+          "base" : "string",
+          "valueUrl" : "NCBI:txid{sourceTaxonId}"
+        }
+      }, {
+        "name" : "targetTaxonId",
+        "titles" : "VirusTaxID",
+        "datatype" : {
+          "base" : "string",
+          "valueUrl" : "NCBI:txid{targetTaxonId}"
+        }
+      }, {
+        "name" : "HostNCBIResolved",
+        "titles" : "HostNCBIResolved",
+        "datatype" : "string"
+      }, {
+        "name" : "VirusNCBIResolved",
+        "titles" : "VirusNCBIResolved",
+        "datatype" : "string"
+      }, {
+        "name" : "ICTVRatified",
+        "titles" : "ICTVRatified",
+        "datatype" : "string"
+      }, {
+        "name" : "sourceTaxonGenusName",
+        "titles" : "HostGenus",
+        "datatype" : "string"
+      }, {
+        "name" : "sourceTaxonFamilyName",
+        "titles" : "HostFamily",
+        "datatype" : "string"
+      }, {
+        "name" : "sourceTaxonOrderName",
+        "titles" : "HostOrder",
+        "datatype" : "string"
+      }, {
+        "name" : "sourceTaxonClassName",
+        "titles" : "HostClass",
+        "datatype" : "string"
+      }, {
+        "name" : "HostOriginal",
+        "titles" : "HostOriginal",
+        "datatype" : "string"
+      }, {
+        "name" : "targetTaxonGenusName",
+        "titles" : "VirusGenus",
+        "datatype" : "string"
+      }, {
+        "name" : "targetTaxonFamilyName",
+        "titles" : "VirusFamily",
+        "datatype" : "string"
+      }, {
+        "name" : "targetTaxonOrderName",
+        "titles" : "VirusOrder",
+        "datatype" : "string"
+      }, {
+        "name" : "targetTaxonClassName",
+        "titles" : "VirusClass",
+        "datatype" : "string"
+      }, {
+        "name" : "VirusOriginal",
+        "titles" : "VirusOriginal",
+        "datatype" : "string"
+      }, {
+        "name" : "HostFlagID",
+        "titles" : "HostFlagID",
+        "datatype" : "string"
+      }, {
+        "name" : "DetectionMethod",
+        "titles" : "DetectionMethod",
+        "datatype" : "string"
+      }, {
+        "name" : "DetectionOriginal",
+        "titles" : "DetectionOriginal",
+        "datatype" : "string"
+      }, {
+        "name" : "Database",
+        "titles" : "Database",
+        "datatype" : "string"
+      }, {
+        "name" : "DatabaseVersion",
+        "titles" : "DatabaseVersion",
+        "datatype" : "string"
+      }, {
+        "name" : "PublicationYear",
+        "titles" : "PublicationYear",
+        "datatype" : "string"
+      }, {
+        "name" : "referenceCitation",
+        "titles" : "ReferenceText",
+        "datatype" : "string"
+      }, {
+        "name" : "referenceId",
+        "titles" : "PMID",
+        "datatype": {
+          "valueUrl" : "https://www.ncbi.nlm.nih.gov/pubmed/{Publications}",
+          "base" :"string"
+        }
+      }, {
+        "name" : "ReleaseYear",
+        "titles" : "ReleaseYear",
+        "datatype" : "string"
+      }, {
+        "name" : "ReleaseMonth",
+        "titles" : "ReleaseMonth",
+        "datatype" : "string"
+      }, {
+        "name" : "ReleaseDay",
+        "titles" : "ReleaseDay",
+        "datatype" : "string"
+      }, {
+        "name" : "CollectionYear",
+        "titles" : "CollectionYear",
+        "datatype" : "string"
+      }, {
+        "name" : "CollectionMonth",
+        "titles" : "CollectionMonth",
+        "datatype" : "string"
+      }, {
+        "name" : "CollectionDay",
+        "titles" : "CollectionDay",
+        "datatype" : "string"
+      }, {
+        "name" : "AssocID",
+        "titles" : "AssocID",
+        "datatype" : "string"
+      }, {
+        "name" : "DatabaseDOI",
+        "titles" : "DatabaseDOI",
+        "datatype" : "string"
+      }, {
+        "name" : "NCBIAccession",
+        "titles" : "NCBIAccession",
+        "datatype" : "string"
+      } ]
+    }
+  } ]
+}
