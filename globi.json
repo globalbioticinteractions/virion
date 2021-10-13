@@ -8,7 +8,7 @@
       "@language" : "en"
     } ],
     "rdfs:comment" : [ "inspired by https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/" ],
-    "url" : "file:///home/jorrit/proj/globi/data/virion/virion.csv.gz",
+    "url" : "https://github.com/viralemergence/virion/raw/main/Virion/Virion.csv.gz",
     "dcterms:bibliographicCitation" : "Carlson, C.J. et al., 2021. The Global Virome in One Network (VIRION): an atlas of vertebrate-virus associations. Available at: http://dx.doi.org/10.1101/2021.08.06.455442",
     "delimiter" : "\t",
     "headerRowCount" : 1,
