@@ -1,4 +1,4 @@
-[![Review](https://github.com/globalbioticinteractions/virion/actions/workflows/review.yml/badge.svg)](https://github.com/globalbioticinteractions/virion/actions) [![Build Status](https://app.travis-ci.com/globalbioticinteractions/virion.svg)](https://app.travis-ci.com/globalbioticinteractions/virion) [![GloBI](https://api.globalbioticinteractions.org/interaction.svg?accordingTo=globi:globalbioticinteractions/virion&refutes=true&refutes=false)](https://globalbioticinteractions.org/?accordingTo=globi:globalbioticinteractions/virion)
+[![GloBI Review by Elton](../../actions/workflows/review.yml/badge.svg)](../../actions/workflows/review.yml) [![GloBI](https://api.globalbioticinteractions.org/interaction.svg?accordingTo=globi:globalbioticinteractions/virion&refutes=true&refutes=false)](https://globalbioticinteractions.org/?accordingTo=globi:globalbioticinteractions/virion)
 
 Configuration to help Global Biotic Interactions (GloBI, https://globalbioticinteractions.org) index: 
 
