@@ -8,9 +8,9 @@
       "@language" : "en"
     } ],
     "rdfs:comment" : [ "inspired by https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/" ],
-    "url" : "https://github.com/viralemergence/virion/raw/main/Virion/Virion.csv.gz",
+    "url" : "https://zenodo.org/records/17636397/files/virion.csv.gz",
     "dcterms:bibliographicCitation" : "Carlson, C.J. et al., 2021. The Global Virome in One Network (VIRION): an atlas of vertebrate-virus associations. Available at: http://dx.doi.org/10.1101/2021.08.06.455442",
-    "delimiter" : "\t",
+    "delimiter" : ",",
     "headerRowCount" : 1,
     "interactionTypeName": "hostOf",
     "interactionTypeId": "http://purl.obolibrary.org/obo/RO_0002453",
@@ -156,6 +156,14 @@
       }, {
         "name" : "DatabaseDOI",
         "titles" : "DatabaseDOI",
+        "datatype" : "string"
+      }, {
+        "name" : "ReleaseDate",
+        "titles" : "ReleaseDate",
+        "datatype" : "string"
+      }, {
+        "name" : "http://rs.tdwg.org/dwc/terms/eventDate",
+        "titles" : "CollectionDate",
         "datatype" : "string"
       }, {
         "name" : "NCBIAccession",
