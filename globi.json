@@ -8,86 +8,178 @@
       "@language" : "en"
     } ],
     "rdfs:comment" : [ "inspired by https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/" ],
-    "url" : "https://zenodo.org/records/17636397/files/virion.csv.gz",
-    "dcterms:bibliographicCitation" : "Carlson, C.J. et al., 2021. The Global Virome in One Network (VIRION): an atlas of vertebrate-virus associations. Available at: http://dx.doi.org/10.1101/2021.08.06.455442",
+    "url" : "https://zenodo.org/records/23683420/files/db_table.csv",
+    "_url" : "db_table.csv",
+    "dcterms:bibliographicCitation" : "Collin Schwantes, Cole Brookson, Timothée Poisot, Tad Dallas, Greg Albery, Colin J. Carlson, Cecilia A. Sanchez, Renata Muylaert, Evan Eskew, Rory Gibb, & Maxwell J Farrell. (2026). The Global Virome in One Network (VIRION): Data Package. Zenodo. https://doi.org/10.5281/zenodo.23683420",
     "delimiter" : ",",
     "headerRowCount" : 1,
-    "interactionTypeName": "hostOf",
-    "interactionTypeId": "http://purl.obolibrary.org/obo/RO_0002453",
-    "null" : [ "", "NA" ],
+    "null" : [ "" ],
     "tableSchema" : {
+      "primaryKey": "referenceCitation",
       "columns" : [ {
-        "name" : "sourceTaxonName",
-        "titles" : "Host",
+        "name" : "referenceCitation",
+        "titles" : "DatabaseVersion",
         "datatype" : "string"
       }, {
-        "name" : "targetTaxonName",
-        "titles" : "Virus",
+        "name" : "Database",
+        "titles" : "Database",
+        "datatype" : "string"
+      }, {
+        "name" : "referenceDoi",
+        "titles" : "DatabaseDOI",
+        "datatype" : "string"
+      } ]
+    }
+  }, {
+    "@context" : [ "http://www.w3.org/ns/csvw", {
+      "@language" : "en"
+    } ],
+    "rdfs:comment" : [ "inspired by https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/" ],
+    "url" : "https://zenodo.org/records/23683420/files/tax_table.csv.gz",
+    "_url" : "tax_table.csv.gz",
+    "dcterms:bibliographicCitation" : "Collin Schwantes, Cole Brookson, Timothée Poisot, Tad Dallas, Greg Albery, Colin J. Carlson, Cecilia A. Sanchez, Renata Muylaert, Evan Eskew, Rory Gibb, & Maxwell J Farrell. (2026). The Global Virome in One Network (VIRION): Data Package. Zenodo. https://doi.org/10.5281/zenodo.23683420",
+    "delimiter" : ",",
+    "headerRowCount" : 1,
+    "null" : [ "" ],
+    "tableSchema" : {
+      "primaryKey": "sourceTaxonHashID",
+      "columns" : [ {
+        "name" : "sourceTaxonHashID",
+        "titles" : "TaxHashID",
+        "datatype" : "string"
+      }, {
+        "name" : "sourceTaxonName",
+        "titles" : "ScientificName",
+        "datatype" : "string"
+      }, {
+        "name" : "sourceTaxonGenusName",
+        "titles" : "Genus",
+        "datatype" : "string"
+      }, {
+        "name" : "sourceTaxonFamilyName",
+        "titles" : "Family",
+        "datatype" : "string"
+      }, {
+        "name" : "sourceTaxonOrderName",
+        "titles" : "Order",
+        "datatype" : "string"
+      }, {
+        "name" : "sourceTaxonClassName",
+        "titles" : "Class",
         "datatype" : "string"
       }, {
         "name" : "sourceTaxonId",
-        "titles" : "HostTaxID",
-        "datatype" : {
-          "base" : "string",
-          "valueUrl" : "NCBI:txid{sourceTaxonId}"
+        "titles" : "NCBITaxID",
+        "datatype": {
+          "base": "string",
+          "valueUrl": "NCBI:{sourceTaxonId}" 
         }
       }, {
-        "name" : "targetTaxonId",
-        "titles" : "VirusTaxID",
-        "datatype" : {
-          "base" : "string",
-          "valueUrl" : "NCBI:txid{targetTaxonId}"
-        }
-      }, {
-        "name" : "HostNCBIResolved",
-        "titles" : "HostNCBIResolved",
-        "datatype" : "string"
-      }, {
-        "name" : "VirusNCBIResolved",
-        "titles" : "VirusNCBIResolved",
+        "name" : "NCBIResolved",
+        "titles" : "NCBIResolved",
         "datatype" : "string"
       }, {
         "name" : "ICTVRatified",
         "titles" : "ICTVRatified",
         "datatype" : "string"
-      }, {
-        "name" : "sourceTaxonGenusName",
-        "titles" : "HostGenus",
+      } ]
+    }
+  }, {
+    "@context" : [ "http://www.w3.org/ns/csvw", {
+      "@language" : "en"
+    } ],
+    "rdfs:comment" : [ "inspired by https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/" ],
+    "url" : "https://zenodo.org/records/23683420/files/tax_table.csv.gz",
+    "_url" : "tax_table.csv.gz",
+    "dcterms:bibliographicCitation" : "Collin Schwantes, Cole Brookson, Timothée Poisot, Tad Dallas, Greg Albery, Colin J. Carlson, Cecilia A. Sanchez, Renata Muylaert, Evan Eskew, Rory Gibb, & Maxwell J Farrell. (2026). The Global Virome in One Network (VIRION): Data Package. Zenodo. https://doi.org/10.5281/zenodo.23683420",
+    "delimiter" : ",",
+    "headerRowCount" : 1,
+    "null" : [ "" ],
+    "tableSchema" : {
+      "primaryKey": "targetTaxonHashID",
+      "columns" : [ {
+        "name" : "targetTaxonHashID",
+        "titles" : "TaxHashID",
         "datatype" : "string"
       }, {
-        "name" : "sourceTaxonFamilyName",
-        "titles" : "HostFamily",
-        "datatype" : "string"
-      }, {
-        "name" : "sourceTaxonOrderName",
-        "titles" : "HostOrder",
-        "datatype" : "string"
-      }, {
-        "name" : "sourceTaxonClassName",
-        "titles" : "HostClass",
-        "datatype" : "string"
-      }, {
-        "name" : "HostOriginal",
-        "titles" : "HostOriginal",
+        "name" : "targetTaxonName",
+        "titles" : "ScientificName",
         "datatype" : "string"
       }, {
         "name" : "targetTaxonGenusName",
-        "titles" : "VirusGenus",
+        "titles" : "Genus",
         "datatype" : "string"
       }, {
         "name" : "targetTaxonFamilyName",
-        "titles" : "VirusFamily",
+        "titles" : "Family",
         "datatype" : "string"
       }, {
         "name" : "targetTaxonOrderName",
-        "titles" : "VirusOrder",
+        "titles" : "Order",
         "datatype" : "string"
       }, {
         "name" : "targetTaxonClassName",
-        "titles" : "VirusClass",
+        "titles" : "Class",
         "datatype" : "string"
       }, {
-        "name" : "VirusOriginal",
+        "name" : "targetTaxonId",
+        "titles" : "NCBITaxID",
+        "datatype": {
+          "base": "string",
+          "valueUrl": "NCBI:{targetTaxonId}"
+        }
+      }, {
+        "name" : "NCBIResolved",
+        "titles" : "NCBIResolved",
+        "datatype" : "string"
+      }, {
+        "name" : "ICTVRatified",
+        "titles" : "ICTVRatified",
+        "datatype" : "string"
+      } ]
+    }
+  }, {
+    "@context" : [ "http://www.w3.org/ns/csvw", {
+      "@language" : "en"
+    } ],
+    "rdfs:comment" : [ "inspired by https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/" ],
+    "url" : "https://zenodo.org/records/23683420/files/virion.csv.gz",
+    "_url" : "virion.csv.gz",
+    "encoding": "iso-8859-1",
+    "dcterms:bibliographicCitation" : "Collin Schwantes, Cole Brookson, Timothée Poisot, Tad Dallas, Greg Albery, Colin J. Carlson, Cecilia A. Sanchez, Renata Muylaert, Evan Eskew, Rory Gibb, & Maxwell J Farrell. (2026). The Global Virome in One Network (VIRION): Data Package. Zenodo. https://doi.org/10.5281/zenodo.23683420",
+    "interactionTypeName": "hostOf",
+    "interactionTypeId": "http://purl.obolibrary.org/obo/RO_0002453",
+    "delimiter" : ",",
+    "headerRowCount" : 1,
+    "null" : [ "" ],
+    "tableSchema" : {
+      "foreignKeys": [{
+        "columnReference": "referenceCitation",
+        "reference": {
+          "columnReference": "referenceCitation"
+        } 
+      }, {
+        "columnReference": "sourceTaxonHashID",
+        "reference": {
+          "columnReference": "sourceTaxonHashID"
+        }
+      }, {
+        "columnReference": "targetTaxonHashID",
+        "reference": {
+          "columnReference": "targetTaxonHashID"
+        }
+      }, {
+        "columnReference": "AssocID",
+        "reference": {
+          "columnReference": "AssocID"
+        }
+      }],
+      "columns" : [ {
+        "name" : "sourceTaxonVerbatimName",
+        "titles" : "HostOriginal",
+        "datatype" : "string"
+      }, {
+        "name" : "targetTaxonVerbatimName",
         "titles" : "VirusOriginal",
         "datatype" : "string"
       }, {
@@ -103,11 +195,7 @@
         "titles" : "DetectionOriginal",
         "datatype" : "string"
       }, {
-        "name" : "Database",
-        "titles" : "Database",
-        "datatype" : "string"
-      }, {
-        "name" : "DatabaseVersion",
+        "name" : "referenceCitation",
         "titles" : "DatabaseVersion",
         "datatype" : "string"
       }, {
@@ -115,15 +203,15 @@
         "titles" : "PublicationYear",
         "datatype" : "string"
       }, {
-        "name" : "referenceCitation",
+        "name" : "ReferenceText",
         "titles" : "ReferenceText",
         "datatype" : "string"
       }, {
-        "name" : "referenceId",
+        "name" : "sourceOccurrenceId",
         "titles" : "PMID",
-        "datatype": {
-          "valueUrl" : "https://www.ncbi.nlm.nih.gov/pubmed/{Publications}",
-          "base" :"string"
+        "datatype" : {
+           "base": "string",
+           "valueUrl": "https://pubmed.ncbi.nlm.nih.gov/{sourceOccurrenceId}"
         }
       }, {
         "name" : "ReleaseYear",
@@ -138,32 +226,56 @@
         "titles" : "ReleaseDay",
         "datatype" : "string"
       }, {
-        "name" : "CollectionYear",
+        "name" : "http://rs.tdwg.org/dwc/terms/year",
         "titles" : "CollectionYear",
         "datatype" : "string"
       }, {
-        "name" : "CollectionMonth",
+        "name" : "http://rs.tdwg.org/dwc/terms/month",
         "titles" : "CollectionMonth",
         "datatype" : "string"
       }, {
-        "name" : "CollectionDay",
+        "name" : "http://rs.tdwg.org/dwc/terms/day",
         "titles" : "CollectionDay",
+        "datatype" : "string"
+      }, {
+        "name" : "sourceTaxonHashID",
+        "titles" : "HostTaxHashID",
+        "datatype" : "string"
+      }, {
+        "name" : "targetTaxonHashID",
+        "titles" : "VirusTaxHashID",
         "datatype" : "string"
       }, {
         "name" : "AssocID",
         "titles" : "AssocID",
         "datatype" : "string"
       }, {
-        "name" : "DatabaseDOI",
-        "titles" : "DatabaseDOI",
+        "name" : "Release_Date",
+        "titles" : "Release_Date",
         "datatype" : "string"
       }, {
-        "name" : "ReleaseDate",
-        "titles" : "ReleaseDate",
+        "name" : "Collection_Date",
+        "titles" : "Collection_Date",
         "datatype" : "string"
-      }, {
-        "name" : "http://rs.tdwg.org/dwc/terms/eventDate",
-        "titles" : "CollectionDate",
+      } ]
+    }
+  } ],
+    "tables_disabled" : [ {
+    "@context" : [ "http://www.w3.org/ns/csvw", {
+      "@language" : "en"
+    } ],
+    "rdfs:comment" : [ "inspired by https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/" ],
+    "url" : "https://zenodo.org/records/23683420/files/ncbi_accession.csv.gz",
+    "_url" : "ncbi_accession.csv.gz",
+    "dcterms:bibliographicCitation" : "Collin Schwantes, Cole Brookson, Timothée Poisot, Tad Dallas, Greg Albery, Colin J. Carlson, Cecilia A. Sanchez, Renata Muylaert, Evan Eskew, Rory Gibb, & Maxwell J Farrell. (2026). The Global Virome in One Network (VIRION): Data Package. Zenodo. https://doi.org/10.5281/zenodo.23683420",
+    "delimiter" : ",",
+    "headerRowCount" : 1,
+    "null" : [ "" ],
+    "tableSchema" : {
+      "primaryKey": "AssocID",
+      "columns" : [ {
+        "name" : "AssocID",
+        "titles" : "AssocID",
         "datatype" : "string"
       }, {
         "name" : "NCBIAccession",
@@ -173,3 +285,4 @@
     }
   } ]
 }
+
